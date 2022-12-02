@@ -23,4 +23,10 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
+}import android.graphics.Bitmap
+import org.claudemirovsky.noveltomanga.NovelToManga
+[.....]
+val ntm = NovelToManga()
+val lines = document.select("span > p").map { it.text() }
+val pages: List<Bitmap> = ntm.getMangaPages(lines)
+[.....]
